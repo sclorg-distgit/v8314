@@ -1,0 +1,43 @@
+The Software collection %{scl_name} is only ment to provide functionality for 
+other software collections such as nodejs or mongodb.
+
+Package %{scl_name} provides V8 JavaScript engine delivered as a Software
+Collection. For more information about Software Collections,
+see the scl(1) man page. By installing the %{scl_name} collection,
+you will get the minimum working set of packages to have a working
+V8 JavaScript engine.
+
+Usage: scl enable %{scl} 'd8'
+
+Software Collections allow you to build and execute applications
+which are not located in the filesystem root hierarchy,
+but are stored in an alternative location, which is %{_scl_root}
+in case of the %{scl_name} collection.
+
+V8 is Google's open source JavaScript engine. V8 is written in C++ and is used
+in Google Chrome, the open source browser from Google. V8 implements ECMAScript
+as specified in ECMA-262, 3rd edition.
+
+When you want to work with the %{scl_name} collection, use the scl
+utility (see the scl(1) man page for usage) to enable the scl
+environment.
+
+Configuration for the %{scl_name} software collection is located
+under %{_sysconfdir}.
+
+Examples:
+scl enable %{scl_name} 'command --arg'
+  Run a specific command with the argument --arg within the %{scl_name}
+  software collections environment.
+
+scl enable %{scl_name} 'd8'
+  Run d8 from the %{scl_name} software collection.
+
+scl enable %{scl_name} bash
+  Run an interactive shell with the %{scl_name} software collection enabled.
+
+scl enable %{scl_name} 'man d8'
+  Show man pages for the d8 command, which is a part of the
+  %{scl_name} software collection.
+
+Report bugs to <http://bugzilla.redhat.com>.
